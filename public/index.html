@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Percetakan Syamra Digital - Solusi Cetakan Anda</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ========================
+     NAVIGASI
+======================== -->
+<nav>
+  <div class="logo-wrap">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10
+                 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4
+                 0h-2V8h2v8z"/>
+      </svg>
+    </div>
+    <div class="logo">
+      SYAMRA <span>DIGITAL</span>
+      <small>Solusi Cetakan Anda</small>
+    </div>
+  </div>
+  <ul>
+    <li><a href="#layanan">Layanan</a></li>
+    <li><a href="#harga">Harga</a></li>
+    <li><a href="#sosial">Program Sosial</a></li>
+    <li><a href="#kontak">Kontak</a></li>
+  </ul>
+</nav>
+
+<!-- ========================
+     HERO
+======================== -->
+<div class="hero">
+  <div class="badge">🖨️ Percetakan &amp; Advertising #1 di Raja Ampat</div>
+  <h1>Percetakan <span>Syamra</span><br><span>Digital</span></h1>
+  <div class="tagline">✨ Solusi Cetakan Anda ✨</div>
+  <p>Melayani kebutuhan cetak, advertising &amp; reklame di Kabupaten Raja Ampat,
+     Papua Barat Daya dengan peralatan profesional &amp; hasil berkualitas.</p>
+  <a href="https://wa.me/6281343435960" class="btn" id="hero-wa-btn">📲 Pesan Sekarang</a>
+  <a href="#layanan" class="btn outline">Lihat Layanan</a>
+
+  <div class="hero-stats">
+    <div class="stat"><span>10+</span><p>Tahun Berpengalaman</p></div>
+    <div class="stat"><span>3</span><p>Kategori Layanan</p></div>
+    <div class="stat"><span>5×</span><p>Program Spanduk Gratis</p></div>
+    <div class="stat"><span>⭐</span><p>Terpercaya di Raja Ampat</p></div>
+  </div>
+</div>
+
+<!-- ========================
+     LAYANAN
+======================== -->
+<section id="layanan">
+  <div class="sec-title">
+    <h2>Layanan Kami</h2>
+    <p>Lengkap dalam 3 kategori untuk semua kebutuhan Anda</p>
+    <div class="line"></div>
+  </div>
+
+  <div class="layanan-tabs">
+    <button class="tab-btn active" onclick="showTab('cetak', event)">🖨️ Percetakan</button>
+    <button class="tab-btn" onclick="showTab('ads', event)">📢 Advertising</button>
+    <button class="tab-btn" onclick="showTab('reklame', event)">🔧 Reklame</button>
+  </div>
+
+  <!-- Tab: Percetakan -->
+  <div class="layanan-panel active" id="tab-cetak">
+    <div class="lay-card c1"><span class="icon">🚩</span><h3>Spanduk</h3><p>Cetak spanduk berbagai ukuran, warna tajam &amp; tahan cuaca</p></div>
+    <div class="lay-card c2"><span class="icon">🪟</span><h3>Baliho</h3><p>Baliho besar untuk promosi outdoor yang maksimal</p></div>
+    <div class="lay-card c3"><span class="icon">🔖</span><h3>Stempel Flash</h3><p>Stempel cepat, rapi, dan tahan lama untuk kebutuhan kantor</p></div>
+    <div class="lay-card c4"><span class="icon">📋</span><h3>Fotocopy</h3><p>Layanan fotocopy cepat dengan hasil bersih &amp; jelas</p></div>
+    <div class="lay-card c5"><span class="icon">✏️</span><h3>ATK</h3><p>Penyediaan alat tulis kantor lengkap untuk kebutuhan Anda</p></div>
+    <div class="lay-card c6"><span class="icon">⌨️</span><h3>Pengetikan</h3><p>Layanan pengetikan dokumen, surat, &amp; laporan profesional</p></div>
+  </div>
+
+  <!-- Tab: Advertising -->
+  <div class="layanan-panel" id="tab-ads">
+    <div class="lay-card c2"><span class="icon">🚀</span><h3>Banner</h3><p>Banner promosi menarik untuk berbagai keperluan acara &amp; bisnis</p></div>
+    <div class="lay-card c1"><span class="icon">🗞️</span><h3>Poster</h3><p>Poster full color dengan desain kreatif &amp; eye-catching</p></div>
+    <div class="lay-card c3"><span class="icon">💌</span><h3>Undangan</h3><p>Undangan pernikahan, acara, &amp; kegiatan dengan desain elegan</p></div>
+    <div class="lay-card c4"><span class="icon">📛</span><h3>Papan Nama Dada</h3><p>Name tag &amp; papan nama dada profesional untuk instansi &amp; acara</p></div>
+    <div class="lay-card c5"><span class="icon">💳</span><h3>ID Card</h3><p>Kartu identitas pegawai, panitia &amp; anggota organisasi</p></div>
+    <div class="lay-card c6"><span class="icon">🏆</span><h3>Plakat</h3><p>Plakat penghargaan &amp; kenang-kenangan berkualitas tinggi</p></div>
+    <div class="lay-card c7"><span class="icon">📝</span><h3>Nota</h3><p>Buku nota kwitansi custom untuk kebutuhan usaha Anda</p></div>
+  </div>
+
+  <!-- Tab: Reklame -->
+  <div class="layanan-panel" id="tab-reklame">
+    <div class="lay-card c5"><span class="icon">💡</span><h3>Neon Box</h3><p>Papan reklame bercahaya untuk visibilitas bisnis 24 jam</p></div>
+    <div class="lay-card c1"><span class="icon">👕</span><h3>Sablon</h3><p>Cetak sablon kaos, seragam, &amp; merchandise custom</p></div>
+    <div class="lay-card c3"><span class="icon">🏛️</span><h3>Gapura</h3><p>Pembuatan gapura untuk acara, desa, &amp; instansi</p></div>
+    <div class="lay-card c7"><span class="icon">🔩</span><h3>Las</h3><p>Jasa las untuk konstruksi rangka reklame &amp; signage</p></div>
+    <div class="lay-card c2"><span class="icon">🪧</span><h3>Papan Nama Kantor</h3><p>Papan nama kantor, toko &amp; instansi yang profesional</p></div>
+    <div class="lay-card c4"><span class="icon">📊</span><h3>Papan Struktur</h3><p>Papan struktur organisasi instansi &amp; perusahaan</p></div>
+    <div class="lay-card c6"><span class="icon">💐</span><h3>Papan Buket &amp; Krans Bunga</h3><p>Buket ucapan &amp; krans bunga untuk berbagai momen spesial</p></div>
+  </div>
+</section>
+
+<!-- ========================
+     HARGA
+======================== -->
+<section class="harga" id="harga">
+  <div class="sec-title">
+    <h2>Daftar Harga</h2>
+    <p>Harga terjangkau, kualitas terbaik</p>
+    <div class="line"></div>
+  </div>
+  <div class="harga-grid" id="harga-grid">
+    <div class="harga-card">
+      <div class="icon">🚩</div>
+      <h3>Spanduk / Baliho</h3>
+      <div class="price">Rp 80.000</div>
+      <div class="unit">per meter</div>
+    </div>
+    <div class="harga-card">
+      <div class="icon">🪧</div>
+      <h3>Standing Banner</h3>
+      <div class="price">Rp 450.000</div>
+      <div class="unit">1 paket lengkap</div>
+    </div>
+    <div class="harga-card">
+      <div class="icon">💳</div>
+      <h3>ID Card</h3>
+      <div class="price">Rp 50.000</div>
+      <div class="unit">per buah</div>
+    </div>
+    <div class="harga-card">
+      <div class="icon">📛</div>
+      <h3>Papan Nama Dada</h3>
+      <div class="price">Rp 100.000</div>
+      <div class="unit">per buah</div>
+    </div>
+    <div class="harga-card">
+      <div class="icon">🔖</div>
+      <h3>Stempel Flash</h3>
+      <div class="price">Rp 150.000</div>
+      <div class="unit">per buah</div>
+    </div>
+  </div>
+  <p class="harga-note">💬 Untuk produk lainnya, hubungi kami via WhatsApp untuk penawaran terbaik</p>
+</section>
+
+<!-- ========================
+     MESIN / PERALATAN
+======================== -->
+<section id="mesin">
+  <div class="sec-title">
+    <h2>Peralatan Profesional</h2>
+    <p>Didukung mesin modern untuk hasil cetakan terbaik</p>
+    <div class="line"></div>
+  </div>
+  <div class="mesin-grid">
+    <div class="mesin-card">
+      <div class="icon">🖨️</div>
+      <div><h3>Mesin Cetak Spanduk</h3><p>Taimes — cetak lebar format besar</p></div>
+    </div>
+    <div class="mesin-card">
+      <div class="icon">📄</div>
+      <div><h3>Mesin Cetak Artpaper</h3><p>Xerox — hasil cetak tajam &amp; presisi</p></div>
+    </div>
+    <div class="mesin-card">
+      <div class="icon">🖌️</div>
+      <div><h3>Printer Foto &amp; Warna</h3><p>Epson L8050 — warna akurat &amp; detail</p></div>
+    </div>
+    <div class="mesin-card">
+      <div class="icon">📋</div>
+      <div><h3>Mesin Fotocopy</h3><p>Fuji — cepat &amp; hasil bersih</p></div>
+    </div>
+    <div class="mesin-card">
+      <div class="icon">✂️</div>
+      <div><h3>Mesin Cutting</h3><p>Potong presisi untuk berbagai material</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================
+     GALERI
+======================== -->
+<section id="galeri" style="background: var(--light);">
+  <div class="sec-title">
+    <h2>Galeri Hasil Karya</h2>
+    <p>Foto hasil cetakan segera hadir — stay tuned! 📸</p>
+    <div class="line"></div>
+  </div>
+  <div class="galeri-grid" id="galeri-grid">
+    <div class="galeri-item"><img src="assets/galeri/galeri-1.jpg" alt="Festival Suling Tambur" style="width:100%;height:100%;object-fit:cover;"><div class="label">Festival Suling Tambur</div></div>
+    <div class="galeri-item"><img src="assets/galeri/galeri-2.jpg" alt="Spanduk Gratis Natal" style="width:100%;height:100%;object-fit:cover;"><div class="label">Spanduk Gratis Natal</div></div>
+    <div class="galeri-item"><img src="assets/galeri/galeri-3.jpg" alt="Spanduk Gratis Idul Fitri" style="width:100%;height:100%;object-fit:cover;"><div class="label">Spanduk Gratis Idul Fitri</div></div>
+  </div>
+</section>
+
+<!-- ========================
+     PROGRAM SOSIAL
+======================== -->
+<section class="sosial" id="sosial">
+  <div class="sec-title">
+    <h2>🕊️ Program Sosial</h2>
+    <p>Bersama menjaga keharmonisan di Raja Ampat</p>
+    <div class="line"></div>
+  </div>
+  <div class="sosial-box">
+    <p>Setiap tahun, <strong>Percetakan Syamra Digital</strong> menyediakan layanan
+       <strong>cetak spanduk GRATIS</strong> untuk seluruh <strong>Masjid &amp; Gereja</strong>
+       se-Kabupaten Raja Ampat pada momen Idul Fitri dan Natal.</p>
+    <div class="tahun-badge">🎉 Sudah Berjalan 12 Tahun Berturut-turut!</div>
+    <p>Kami percaya bisnis yang baik adalah bisnis yang memberi manfaat nyata bagi masyarakat. 🙏</p>
+    <div class="sosial-icons">
+      <div class="sosial-icon">🕌</div>
+      <div class="sosial-icon">⛪</div>
+      <div class="sosial-icon">🌙</div>
+      <div class="sosial-icon">🎄</div>
+      <div class="sosial-icon">🤝</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================
+     OWNER / PEMILIK
+======================== -->
+<section class="owner">
+  <div class="sec-title">
+    <h2>Tentang Pemilik</h2>
+    <p>Sosok di balik Percetakan Syamra Digital</p>
+    <div class="line"></div>
+  </div>
+  <div class="owner-wrap">
+    <div class="owner-photo">
+      <img id="owner-foto" src="assets/owner/owner.jpg" alt="Owner" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+    </div>
+    <div class="owner-info">
+      <h3 id="owner-nama">Ismail Syam</h3>
+      <div class="title" id="owner-title">Founder &amp; Owner — Percetakan Syamra Digital</div>
+      <p id="owner-bio">Ismail Syam adalah pelaku industri kreatif lokal yang aktif membangun ekosistem
+         percetakan &amp; advertising di Raja Ampat. Dikenal luas karena kepedulian sosialnya,
+         beliau telah konsisten menjalankan program spanduk gratis untuk rumah ibadah selama
+         8 tahun berturut-turut sebagai wujud nyata cinta terhadap masyarakat Raja Ampat.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========================
+     KONTAK
+======================== -->
+<section class="kontak" id="kontak">
+  <div class="sec-title">
+    <h2>Hubungi Kami</h2>
+    <p>Siap melayani Anda setiap hari</p>
+    <div class="line"></div>
+  </div>
+  <div class="kontak-grid">
+    <div class="kontak-item">
+      <span>📍</span>
+      <h3>Alamat</h3>
+      <p id="kontak-alamat">Jl. Perumahan Sosial, Samping Gereja Alfa Omega,<br>Waisai, Kab. Raja Ampat, Papua Barat Daya</p>
+    </div>
+    <div class="kontak-item">
+      <span>📱</span>
+      <h3>WhatsApp / Telp</h3>
+      <p id="kontak-whatsapp">0813-4343-5960<br>Siap menerima pesanan &amp; konsultasi</p>
+    </div>
+    <div class="kontak-item">
+      <span>📘</span>
+      <h3>Facebook</h3>
+      <p id="kontak-facebook">Rumah Cetak Raja Ampat<br>rumahcetak.rajaampat.9</p>
+    </div>
+  </div>
+  <a href="https://wa.me/6281343435960" class="wa-btn" id="kontak-wa-btn">💬 Chat WhatsApp Sekarang</a>
+</section>
+
+<!-- ========================
+     FOOTER
+======================== -->
+<footer>
+  <p>© 2025 <strong>Percetakan Syamra Digital</strong> · Waisai, Raja Ampat, Papua Barat Daya 🌊</p>
+  <p style="margin-top: 6px"><em>"Solusi Cetakan Anda"</em> — Melayani dengan ❤️ untuk masyarakat Raja Ampat</p>
+</footer>
+
+<script src="js/content-loader.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

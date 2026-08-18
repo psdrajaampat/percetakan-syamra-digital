@@ -1,20 +1,27 @@
 name = "syamra-digital"
-pages_build_output_dir = "."
+main = "src/index.js"
 compatibility_date = "2024-09-01"
 
+# File statis (index.html, admin panel, css, js, gambar default)
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
 # KV namespace untuk menyimpan data konten (harga, layanan, galeri, owner, kontak)
-# Buat dengan: wrangler kv namespace create SITE_CONTENT
-# Lalu isi "id" di bawah dengan id yang dihasilkan.
+# Dashboard: Storage & databases > KV > Create > lalu isi id di bawah,
+# ATAU bind langsung lewat: project Worker > Settings > Bindings > Add > KV Namespace
 [[kv_namespaces]]
 binding = "SITE_CONTENT"
 id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
 
 # R2 bucket untuk menyimpan file gambar upload (galeri, foto owner)
-# Buat dengan: wrangler r2 bucket create syamra-uploads
+# Dashboard: R2 > Create bucket > lalu bind lewat:
+# project Worker > Settings > Bindings > Add > R2 Bucket
 [[r2_buckets]]
 binding = "UPLOADS"
 bucket_name = "syamra-uploads"
 
-# Secrets (JANGAN taruh nilai asli di sini — set lewat dashboard atau CLI):
-#   wrangler pages secret put ADMIN_PASSWORD
-#   wrangler pages secret put SESSION_SECRET
+# Secrets (JANGAN taruh nilai asli di sini — set lewat dashboard:
+# project Worker > Settings > Variables and Secrets > Add):
+#   ADMIN_PASSWORD
+#   SESSION_SECRET
