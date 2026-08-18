@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel Admin — Syamra Digital</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<!-- ===== LOGIN SCREEN ===== -->
+<div id="login-screen" class="login-wrap">
+  <form id="login-form" class="login-box">
+    <div class="login-logo">🖨️ Syamra Digital</div>
+    <h1>Panel Admin</h1>
+    <p class="login-sub">Masuk untuk mengelola konten website</p>
+    <input type="password" id="login-password" placeholder="Password admin" autocomplete="current-password" required>
+    <button type="submit" class="btn-primary">Masuk</button>
+    <div id="login-error" class="error-msg"></div>
+  </form>
+</div>
+
+<!-- ===== DASHBOARD ===== -->
+<div id="dashboard" class="dashboard hidden">
+  <header class="topbar">
+    <div class="topbar-title">🖨️ Panel Admin — Syamra Digital</div>
+    <div class="topbar-actions">
+      <a href="../index.html" target="_blank" class="btn-ghost">👁️ Lihat Website</a>
+      <button id="logout-btn" class="btn-ghost">Keluar</button>
+    </div>
+  </header>
+
+  <div id="save-banner" class="save-banner hidden"></div>
+
+  <nav class="tabs-nav">
+    <button class="nav-btn active" data-tab="harga">💰 Harga</button>
+    <button class="nav-btn" data-tab="layanan">🧰 Layanan</button>
+    <button class="nav-btn" data-tab="galeri">🖼️ Galeri</button>
+    <button class="nav-btn" data-tab="owner">👤 Profil Owner</button>
+    <button class="nav-btn" data-tab="kontak">📞 Kontak</button>
+  </nav>
+
+  <main class="panel-content">
+
+    <!-- ===== HARGA ===== -->
+    <section id="panel-harga" class="panel active">
+      <div class="panel-header">
+        <h2>Daftar Harga</h2>
+        <button class="btn-add" data-add="harga">+ Tambah Item</button>
+      </div>
+      <div id="harga-list" class="item-list"></div>
+    </section>
+
+    <!-- ===== LAYANAN ===== -->
+    <section id="panel-layanan" class="panel">
+      <div class="panel-header">
+        <h2>Layanan</h2>
+      </div>
+      <div class="sub-tabs">
+        <button class="sub-tab-btn active" data-sub="cetak">🖨️ Percetakan</button>
+        <button class="sub-tab-btn" data-sub="ads">📢 Advertising</button>
+        <button class="sub-tab-btn" data-sub="reklame">🔧 Reklame</button>
+      </div>
+      <div class="panel-header" style="margin-top:14px;">
+        <span></span>
+        <button class="btn-add" data-add-layanan>+ Tambah Layanan</button>
+      </div>
+      <div id="layanan-cetak-list" class="item-list sub-panel active"></div>
+      <div id="layanan-ads-list" class="item-list sub-panel"></div>
+      <div id="layanan-reklame-list" class="item-list sub-panel"></div>
+    </section>
+
+    <!-- ===== GALERI ===== -->
+    <section id="panel-galeri" class="panel">
+      <div class="panel-header">
+        <h2>Galeri Foto</h2>
+        <label class="btn-add upload-label">
+          + Upload Foto
+          <input type="file" id="galeri-upload-input" accept="image/*" hidden>
+        </label>
+      </div>
+      <p class="hint">Foto akan diupload ke Cloudflare R2. Ukuran maksimal 8MB (JPG, PNG, WEBP, GIF).</p>
+      <div id="galeri-list" class="galeri-admin-grid"></div>
+    </section>
+
+    <!-- ===== OWNER ===== -->
+    <section id="panel-owner" class="panel">
+      <div class="panel-header">
+        <h2>Profil Owner</h2>
+      </div>
+      <div class="owner-form">
+        <div class="owner-photo-edit">
+          <img id="owner-preview" src="" alt="Foto owner">
+          <label class="btn-add upload-label">
+            Ganti Foto
+            <input type="file" id="owner-upload-input" accept="image/*" hidden>
+          </label>
+        </div>
+        <div class="owner-fields">
+          <label>Nama</label>
+          <input type="text" id="owner-nama-input">
+          <label>Jabatan / Title</label>
+          <input type="text" id="owner-title-input">
+          <label>Bio</label>
+          <textarea id="owner-bio-input" rows="6"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== KONTAK ===== -->
+    <section id="panel-kontak" class="panel">
+      <div class="panel-header">
+        <h2>Informasi Kontak</h2>
+      </div>
+      <div class="kontak-form">
+        <label>Alamat</label>
+        <textarea id="kontak-alamat-input" rows="3"></textarea>
+        <label>Nomor WhatsApp (format: 62xxxxxxxxxx)</label>
+        <input type="text" id="kontak-whatsapp-input" placeholder="6281343435960">
+        <label>Facebook (username / nama halaman)</label>
+        <input type="text" id="kontak-facebook-input" placeholder="rumahcetak.rajaampat.9">
+      </div>
+    </section>
+
+  </main>
+
+  <div class="save-bar">
+    <div id="save-status" class="save-status"></div>
+    <button id="save-btn" class="btn-primary">💾 Simpan Semua Perubahan</button>
+  </div>
+</div>
+
+<template id="tpl-harga-item">
+  <div class="item-card" data-index>
+    <input type="text" class="f-icon" placeholder="🚩" maxlength="4">
+    <input type="text" class="f-nama" placeholder="Nama produk">
+    <input type="text" class="f-harga" placeholder="Rp 80.000">
+    <input type="text" class="f-satuan" placeholder="per meter">
+    <button class="btn-remove" title="Hapus">✕</button>
+  </div>
+</template>
+
+<template id="tpl-layanan-item">
+  <div class="item-card" data-index>
+    <input type="text" class="f-icon" placeholder="🚩" maxlength="4">
+    <input type="text" class="f-judul" placeholder="Judul layanan">
+    <input type="text" class="f-desc" placeholder="Deskripsi singkat">
+    <button class="btn-remove" title="Hapus">✕</button>
+  </div>
+</template>
+
+<template id="tpl-galeri-item">
+  <div class="galeri-admin-item" data-index>
+    <img class="g-img" src="" alt="">
+    <input type="text" class="g-label" placeholder="Label / caption foto">
+    <button class="btn-remove" title="Hapus">✕</button>
+  </div>
+</template>
+
+<script src="admin.js"></script>
+</body>
+</html>

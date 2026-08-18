@@ -42,7 +42,7 @@
   <div class="tagline">✨ Solusi Cetakan Anda ✨</div>
   <p>Melayani kebutuhan cetak, advertising &amp; reklame di Kabupaten Raja Ampat,
      Papua Barat Daya dengan peralatan profesional &amp; hasil berkualitas.</p>
-  <a href="https://wa.me/6281343435960" class="btn">📲 Pesan Sekarang</a>
+  <a href="https://wa.me/6281343435960" class="btn" id="hero-wa-btn">📲 Pesan Sekarang</a>
   <a href="#layanan" class="btn outline">Lihat Layanan</a>
 
   <div class="hero-stats">
@@ -111,7 +111,7 @@
     <p>Harga terjangkau, kualitas terbaik</p>
     <div class="line"></div>
   </div>
-  <div class="harga-grid">
+  <div class="harga-grid" id="harga-grid">
     <div class="harga-card">
       <div class="icon">🚩</div>
       <h3>Spanduk / Baliho</h3>
@@ -188,7 +188,7 @@
     <p>Foto hasil cetakan segera hadir — stay tuned! 📸</p>
     <div class="line"></div>
   </div>
-  <div class="galeri-grid">
+  <div class="galeri-grid" id="galeri-grid">
     <div class="galeri-item"><img src="assets/galeri/galeri-1.jpg" alt="Festival Suling Tambur" style="width:100%;height:100%;object-fit:cover;"><div class="label">Festival Suling Tambur</div></div>
     <div class="galeri-item"><img src="assets/galeri/galeri-2.jpg" alt="Spanduk Gratis Natal" style="width:100%;height:100%;object-fit:cover;"><div class="label">Spanduk Gratis Natal</div></div>
     <div class="galeri-item"><img src="assets/galeri/galeri-3.jpg" alt="Spanduk Gratis Idul Fitri" style="width:100%;height:100%;object-fit:cover;"><div class="label">Spanduk Gratis Idul Fitri</div></div>
@@ -231,12 +231,12 @@
   </div>
   <div class="owner-wrap">
     <div class="owner-photo">
-      <img src="assets/owner/owner.jpg" alt="Ismail Syam" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+      <img id="owner-foto" src="assets/owner/owner.jpg" alt="Owner" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
     </div>
     <div class="owner-info">
-      <h3>Ismail Syam</h3>
-      <div class="title">Founder &amp; Owner — Percetakan Syamra Digital</div>
-      <p>Ismail Syam adalah pelaku industri kreatif lokal yang aktif membangun ekosistem
+      <h3 id="owner-nama">Ismail Syam</h3>
+      <div class="title" id="owner-title">Founder &amp; Owner — Percetakan Syamra Digital</div>
+      <p id="owner-bio">Ismail Syam adalah pelaku industri kreatif lokal yang aktif membangun ekosistem
          percetakan &amp; advertising di Raja Ampat. Dikenal luas karena kepedulian sosialnya,
          beliau telah konsisten menjalankan program spanduk gratis untuk rumah ibadah selama
          8 tahun berturut-turut sebagai wujud nyata cinta terhadap masyarakat Raja Ampat.</p>
@@ -257,20 +257,20 @@
     <div class="kontak-item">
       <span>📍</span>
       <h3>Alamat</h3>
-      <p>Jl. Perumahan Sosial, Samping Gereja Alfa Omega,<br>Waisai, Kab. Raja Ampat, Papua Barat Daya</p>
+      <p id="kontak-alamat">Jl. Perumahan Sosial, Samping Gereja Alfa Omega,<br>Waisai, Kab. Raja Ampat, Papua Barat Daya</p>
     </div>
     <div class="kontak-item">
       <span>📱</span>
       <h3>WhatsApp / Telp</h3>
-      <p>0813-4343-5960<br>Siap menerima pesanan &amp; konsultasi</p>
+      <p id="kontak-whatsapp">0813-4343-5960<br>Siap menerima pesanan &amp; konsultasi</p>
     </div>
     <div class="kontak-item">
       <span>📘</span>
       <h3>Facebook</h3>
-      <p>Rumah Cetak Raja Ampat<br>rumahcetak.rajaampat.9</p>
+      <p id="kontak-facebook">Rumah Cetak Raja Ampat<br>rumahcetak.rajaampat.9</p>
     </div>
   </div>
-  <a href="https://wa.me/6281343435960" class="wa-btn">💬 Chat WhatsApp Sekarang</a>
+  <a href="https://wa.me/6281343435960" class="wa-btn" id="kontak-wa-btn">💬 Chat WhatsApp Sekarang</a>
 </section>
 
 <!-- ========================
@@ -281,6 +281,7 @@
   <p style="margin-top: 6px"><em>"Solusi Cetakan Anda"</em> — Melayani dengan ❤️ untuk masyarakat Raja Ampat</p>
 </footer>
 
+<script src="js/content-loader.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

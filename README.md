@@ -1,9 +1,8 @@
 # 🖨️ Percetakan Syamra Digital
 
 Landing page resmi **Percetakan Syamra Digital** — Solusi Cetakan Anda di Raja Ampat, Papua Barat Daya.
-
-🌐 **Live Demo:** [https://username.github.io/syamra-digital](https://username.github.io/syamra-digital)
-*(Ganti `username` dengan GitHub username Anda)*
+Sekarang dilengkapi **panel admin** (`/admin`) untuk mengubah harga, layanan, galeri, profil owner,
+dan kontak langsung dari browser, tanpa edit kode.
 
 ---
 
@@ -11,43 +10,37 @@ Landing page resmi **Percetakan Syamra Digital** — Solusi Cetakan Anda di Raja
 
 ```
 syamra-digital/
-├── index.html        # Halaman utama
-├── css/
-│   └── style.css     # Semua styling & layout
+├── index.html          # Halaman utama (konten dinamis via /api/content)
+├── css/style.css        # Styling halaman utama
 ├── js/
-│   └── main.js       # Interaktivitas tab layanan
-├── assets/           # Folder untuk foto & gambar galeri (opsional)
+│   ├── content-loader.js  # Mengambil data dari API & merender ke halaman utama
+│   └── main.js             # Interaktivitas tab layanan
+├── admin/                # Panel admin (login + kelola konten)
+│   ├── index.html
+│   ├── admin.css
+│   └── admin.js
+├── functions/             # Cloudflare Pages Functions (backend API)
+│   ├── _utils.js
+│   ├── api/login.js, logout.js, me.js, content.js, upload.js
+│   └── images/[[path]].js   # Menyajikan file dari R2 secara publik
+├── assets/                # Foto & gambar default
+├── wrangler.toml          # Konfigurasi binding KV & R2
+├── ADMIN-SETUP.md         # 📖 Panduan lengkap deploy & setup panel admin
 └── README.md
 ```
 
 ---
 
-## 🚀 Cara Upload ke GitHub Pages
+## 🚀 Cara Deploy (Cloudflare Pages)
 
-### 1. Buat repositori di GitHub
-- Buka [github.com](https://github.com) → **New repository**
-- Nama repo: `syamra-digital`
-- Set ke **Public**
-- Klik **Create repository**
+Website ini butuh **Cloudflare Pages** (bukan GitHub Pages) karena panel admin
+menggunakan Pages Functions + KV + R2 sebagai backend.
 
-### 2. Upload file
-```bash
-# Jika menggunakan Git di komputer:
-git init
-git add .
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/USERNAME/syamra-digital.git
-git push -u origin main
-```
-
-Atau bisa juga drag & drop langsung di halaman GitHub → **Upload files**.
-
-### 3. Aktifkan GitHub Pages
-- Masuk ke repo → **Settings** → **Pages**
-- Di bagian **Branch**, pilih `main` → folder `/ (root)`
-- Klik **Save**
-- Website aktif di: `https://USERNAME.github.io/syamra-digital`
+👉 **Ikuti panduan lengkap di [`ADMIN-SETUP.md`](./ADMIN-SETUP.md)** untuk:
+1. Deploy repo ke Cloudflare Pages
+2. Membuat KV namespace (data konten) & R2 bucket (upload foto)
+3. Mengatur password admin
+4. Mengakses panel admin di `/admin`
 
 ---
 
@@ -60,6 +53,8 @@ Atau bisa juga drag & drop langsung di halaman GitHub → **Upload files**.
 - ✅ Profil pemilik
 - ✅ Kontak & tombol WhatsApp langsung
 - ✅ Section Program Sosial
+- ✅ **Panel admin** untuk update harga, layanan, galeri, profil owner & kontak tanpa edit kode
+- ✅ Upload foto galeri/owner langsung ke Cloudflare R2 lewat panel admin
 
 ---
 
